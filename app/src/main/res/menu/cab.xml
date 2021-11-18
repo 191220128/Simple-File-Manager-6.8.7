@@ -78,8 +78,5 @@
         android:title="@string/select_all"
         app:showAsAction="ifRoom"/>
 
-    <item
-        android:id="@+id/useless_button"
-        android:title="useless_button"
-        app:showAsAction="never"/>
+
 </menu>

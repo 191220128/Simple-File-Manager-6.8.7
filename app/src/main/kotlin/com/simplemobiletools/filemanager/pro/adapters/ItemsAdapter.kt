@@ -124,8 +124,7 @@ class ItemsAdapter(activity: SimpleActivity, var listItems: MutableList<ListItem
             R.id.cab_compress -> compressSelection()
             R.id.cab_decompress -> decompressSelection()
             R.id.cab_select_all -> selectAll()
-            R.id.cab_delete -> askConfirmDelete()
-            R.id.useless_button-> Toast.makeText(activity, "我是个没用的按钮", Toast.LENGTH_LONG).show();
+            R.id.cab_delete -> askConfirmDelete();
         }
     }
 
