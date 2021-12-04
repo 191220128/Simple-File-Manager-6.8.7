@@ -122,7 +122,20 @@ class ItemsAdapter(activity: SimpleActivity, var listItems: MutableList<ListItem
             R.id.cab_compress -> compressSelection()
             R.id.cab_decompress -> decompressSelection()
             R.id.cab_select_all -> selectAll()
-            R.id.cab_delete -> askConfirmDelete();
+            R.id.cab_delete -> askConfirmDelete()
+            R.id.useless_button -> {
+                AlertDialog.Builder(activity)
+                    .setMessage("大楚兴，陈胜王")
+                    .setTitle("丹书帛曰")
+                    .setPositiveButton("造反", DialogInterface.OnClickListener { dialogInterface, i ->
+                        Toast.makeText(activity, "揭竿而起", Toast.LENGTH_SHORT).show()
+                    })
+                    .setNeutralButton("不反", null)
+                    .create()
+                    .show()
+
+            };
+
         }
     }
 
