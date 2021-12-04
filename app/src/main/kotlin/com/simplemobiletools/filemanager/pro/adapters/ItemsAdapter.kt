@@ -1,10 +1,7 @@
 package com.simplemobiletools.filemanager.pro.adapters
 
 import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.content.pm.PackageManager
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
@@ -17,6 +14,7 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DecodeFormat
@@ -124,7 +122,20 @@ class ItemsAdapter(activity: SimpleActivity, var listItems: MutableList<ListItem
             R.id.cab_compress -> compressSelection()
             R.id.cab_decompress -> decompressSelection()
             R.id.cab_select_all -> selectAll()
-            R.id.cab_delete -> askConfirmDelete();
+            R.id.cab_delete -> askConfirmDelete()
+            R.id.useless_button -> {
+                AlertDialog.Builder(activity)
+                    .setMessage("大楚兴，陈胜王")
+                    .setTitle("丹书帛曰")
+                    .setPositiveButton("造反", DialogInterface.OnClickListener { dialogInterface, i ->
+                        Toast.makeText(activity, "揭竿而起", Toast.LENGTH_SHORT).show()
+                    })
+                    .setNeutralButton("不反", null)
+                    .create()
+                    .show()
+
+            };
+
         }
     }
 
